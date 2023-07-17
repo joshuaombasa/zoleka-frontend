@@ -1,0 +1,13 @@
+
+
+form {
+  width: 90%;
+  margin: 0 auto;
+}
+
+input, button {
+  width: 30%;
+  display: block;
+  padding: 0.5em 1em;
+  margin-bottom: 0.8em;
+}
