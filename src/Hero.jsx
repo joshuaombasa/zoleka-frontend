@@ -1,6 +1,9 @@
-import React from "react";
+import React, {useContext} from "react";
+import { formContext } from "./context/formContextProvider";
 
 export default function Hero() {
+
+    const {handleSubmit} = useContext(formContext)
 
     const [formData, setFormData] = React.useState({
         name: '',
