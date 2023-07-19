@@ -2,7 +2,7 @@ import React, { createContext } from "react";
 
 const formContext = createContext()
 
-function FormContextProvider() {
+function FormContextProvider(props) {
 
 
     function handleSubmit(formData) {
@@ -26,8 +26,8 @@ function FormContextProvider() {
 
     return (
         <>
-            <formContext.Provider>
-
+            <formContext.Provider value={{handleSubmit: handleSubmit}}>
+                {props.children()}
             </formContext.Provider>
         </>
     )
