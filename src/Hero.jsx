@@ -21,8 +21,9 @@ export default function Hero() {
         })
     }
 
-    function handleSubmit(event) {
+    function submitForm(event) {
         event.preventDefault()
+        handleSubmit(formData)
 
         fetch('http://localhost:3000/customers', {
             method: 'POST',
@@ -45,7 +46,7 @@ export default function Hero() {
 
     return (
         <div className="user--form">
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={submitForm}>
                 <label htmlFor="">Enter name:</label>
                 <input
                     type="text"
